@@ -1,6 +1,14 @@
 dependencies:
+  '@godaddy/terminus': 4.4.1
   express: 4.17.1
 packages:
+  /@godaddy/terminus/4.4.1:
+    dependencies:
+      es6-promisify: 6.1.1
+      stoppable: 1.1.0
+    dev: false
+    resolution:
+      integrity: sha512-ZPwsG7xN+B2bvnEu6+o0rBPAFbXmm6Bk/RAR4b/nhjNOSJtbVFYTd+JSaJYL/jyESqcTcAyzlWO0dmbT4YsckQ==
   /accepts/1.3.7:
     dependencies:
       mime-types: 2.1.25
@@ -87,6 +95,10 @@ packages:
       node: '>= 0.8'
     resolution:
       integrity: sha1-rT/0yG7C0CkyL1oCw6mmBslbP1k=
+  /es6-promisify/6.1.1:
+    dev: false
+    resolution:
+      integrity: sha512-HBL8I3mIki5C1Cc9QjKUenHtnG0A5/xA8Q/AllRcfiwl2CZFXGK7ddBiCoRwAix4i2KxcQfjtIVcrVbB3vbmwg==
   /escape-html/1.0.3:
     dev: false
     resolution:
@@ -356,6 +368,13 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha1-Fhx9rBd2Wf2YEfQ3cfqZOBR4Yow=
+  /stoppable/1.1.0:
+    dev: false
+    engines:
+      node: '>=4'
+      npm: '>=6'
+    resolution:
+      integrity: sha512-KXDYZ9dszj6bzvnEMRYvxgeTHU74QBFL54XKtP3nyMuJ81CFYtABZ3bAzL2EdFUaEwJOBOgENyFj3R7oTzDyyw==
   /toidentifier/1.0.0:
     dev: false
     engines:
@@ -393,4 +412,5 @@ registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
+  '@godaddy/terminus': ^4.4.1
   express: ^4.17.1
