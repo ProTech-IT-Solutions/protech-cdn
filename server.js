@@ -10,15 +10,6 @@ const app = express();
 // https://expressjs.com/en/starter/static-files.html
 app.use(express.static("public"));
 
-// https://expressjs.com/en/starter/basic-routing.html
-app.get("/status", (err, request, response) => {
-  if (err) {
-    response.send(500);
-} else {
-    response.send(200);
-}
-});
-
 
 // https://expressjs.com/en/starter/basic-routing.html
 app.get("/status", (request, response) => {
