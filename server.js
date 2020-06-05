@@ -15,6 +15,16 @@ app.get("/jquery", (request, response) => {
   response.sendFile(__dirname + "/jquery/jquery.js");
 });
 
+app.get("/bootstrapjs", (request, response) => {
+  response.sendFile(__dirname + "/bootstrap/bootstrap.js");
+})
+
+
+app.get("/bootstrapcss", (request, response) => {
+  response.sendFile(__dirname + "/bootstrap/bootstrap.css");
+})
+
+
 // https://expressjs.com/en/starter/basic-routing.html
 app.get("/status", (request, response) => {
   response.sendStatus(200)
