@@ -15,6 +15,8 @@ app.get("/jquery", (request, response) => {
   response.sendFile(__dirname + "/jquery/jquery.js");
 });
 
+// BOOTSTRAP JS AND CSS
+
 app.get("/bootstrapjs", (request, response) => {
   response.sendFile(__dirname + "/bootstrap/bootstrap.js");
 })
