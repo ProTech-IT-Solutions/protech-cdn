@@ -19,6 +19,10 @@ app.get("/swal", (request, response) => {
   response.sendFile(__dirname + "/sweetalert/swal.js");
 });
 
+app.get("/socketio", (request, response) => {
+  response.sendFile(__dirname + "/socket/socket.js");
+});
+
 
 // BOOTSTRAP JS AND CSS
 
@@ -42,4 +46,7 @@ console.log("--------- CDN HAS STARTED -------------");
 // listen for requests :)
 const listener = app.listen(process.env.PORT, () => {
   console.log("Your app is listening on port " + listener.address().port);
+});
+app.use((req, res,next)=>{
+   res.status(404).send('<h1><i> OOPS! page not found </i></h1>');
 });
