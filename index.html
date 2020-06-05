@@ -2,11 +2,79 @@
   * {
     font-family: sans-serif;
   }
+  ul, #myUL {
+  list-style-type: none;
+}
+
+/* Remove margins and padding from the parent ul */
+#myUL {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the caret/arrow */
+.caret {
+  cursor: pointer;
+  user-select: none; /* Prevent text selection */
+}
+
+/* Create the caret/arrow with a unicode, and style it */
+.caret::before {
+  content: "\25B6";
+  color: black;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+/* Rotate the caret/arrow icon when clicked on (using JavaScript) */
+.caret-down::before {
+  transform: rotate(90deg);
+}
+
+/* Hide the nested list */
+.nested {
+  display: none;
+}
+
+/* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
+.active {
+  display: block;
+}
 </style>
-<center>
-  <h1>
-    Welcome to ProTech CDN
-  </h1>
-  <b>jquery: </b
-  ><a href="https://cdn.ptuk.tk/jquery">https://cdn.ptuk.tk/jquery</a>
-</center>
+<h1>
+  <i>ProTech CDN</i>
+</h1>
+  <small>
+    serving the community jquery, bootstrap and more...
+  </small>
+<ul id="myUL">
+  <li><span class="caret">Bootstrap</span>
+    <ul class="nested">
+      <li>Our CDN serves two parts, the CSS and the JavaScript</li>
+      <li><span class="caret">CSS</span>
+        <ul class="nested">
+          <li><code><a href="https://cdn.ptuk.tk/bootstrapcss">https://cdn.ptuk.tk/bootstrapcss</a></code></li>
+        </ul>
+      </li>
+      <li><span class="caret">JavaScript</span>
+        <ul class="nested">
+          <li><code><a href="https://cdn.ptuk.tk/bootstrapjs">https://cdn.ptuk.tk/bootstrapjs</a></code></li>
+        </ul>
+      </li>  
+    
+    </ul>
+  </li>
+</ul>
+
+<script>
+var toggler = document.getElementsByClassName("caret");
+var i;
+
+for (i = 0; i < toggler.length; i++) {
+  toggler[i].addEventListener("click", function() {
+    this.parentElement.querySelector(".nested").classList.toggle("active");
+    this.classList.toggle("caret-down");
+  });
+}
+</script>
+
