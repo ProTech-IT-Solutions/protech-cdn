@@ -50,3 +50,7 @@ const listener = app.listen(process.env.PORT, () => {
 app.use((req, res,next)=>{
    res.status(404).send('<h1><i> OOPS! page not found </i></h1>');
 });
+
+app.use((req, res,next)=>{
+   res.status(503).send('<h1> Site is down for maintenance or is broken </h1>');
+});
