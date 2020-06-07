@@ -4,4 +4,4 @@ the free CDN for developers, powered by express.JS
 
 ---
 
-included: jquery, sweetalert and bootstrap (CSS and JS)
+included: jquery, sweetalert and bootstrap (CSS and JS) and socket.io (NEW!)
