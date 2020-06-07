@@ -41,12 +41,16 @@ app.get("/status", (request, response) => {
   response.sendStatus(200)
 });
 
-
-console.log("--------- CDN HAS STARTED -------------");
+console.warn("--------- CDN HAS STARTED -------------");
+console.log("Greetings user! thanks for choosing ProTech CDN!");
+console.log("when adding a new package, you'll need the main ");
+console.log("raw code and it should be in a folder, linked in");
+console.log("see example.md for more details")
 // listen for requests :)
 const listener = app.listen(process.env.PORT, () => {
   console.log("Your app is listening on port " + listener.address().port);
 });
+console.warn("CDN version: 1.0.0");
 app.use((req, res,next)=>{
    res.status(404).send('<h1><i> OOPS! page not found </i></h1>');
 });
