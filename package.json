@@ -4,10 +4,12 @@
   "description": "A simple CDN with express.",
   "main": "server.js",
   "scripts": {
+    "build": "webpack",
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "webpack": "^4.43.0"
   },
   "engines": {
     "node": "12.x"
